@@ -1,0 +1,2104 @@
+Compiling 121 files with Solc 0.8.26
+Solc 0.8.26 finished in 432.82s
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+  --> test/DeepSimulation.t.sol:70:10:
+   |
+70 |         (address expectedAddress, bytes32 salt) = HookMiner.find(address(factory), flags, creationCode, constructorArgs);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> test/FenwickAndTax.t.sol:33:9:
+   |
+33 |         uint256 deadline
+   |         ^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/FenwickAndTax.t.sol:425:9:
+    |
+425 |         uint256 user1BalBefore = token.balanceOf(user1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/V4LotteryHookIntegration.t.sol:527:9:
+    |
+527 |         address starter = address(0xAAA);
+    |         ^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/V4LotteryHookIntegration.t.sol:535:9:
+    |
+535 |         uint256 devBefore = address(this).balance; // dev is address(this)
+    |         ^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/V4LotteryHookIntegration.t.sol:597:9:
+    |
+597 |         uint256 reservedAfter = engine.reservedPrizePool();
+    |         ^^^^^^^^^^^^^^^^^^^^^
+
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> test/v21/V21HookPendingPayoutRetry.t.sol:30:42:
+   |
+30 |     function processPendingWinnerPayouts(uint256 maxCount) external {
+   |                                          ^^^^^^^^^^^^^^^^
+
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> test/v21/V21HookPendingPayoutRetry.t.sol:34:30:
+   |
+34 |     function autoLotteryStep(address rewardTo, uint256 maxPayAttempts)
+   |                              ^^^^^^^^^^^^^^^^
+
+Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> test/v21/V21HookPendingPayoutRetry.t.sol:34:48:
+   |
+34 |     function autoLotteryStep(address rewardTo, uint256 maxPayAttempts)
+   |                                                ^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+  --> test/v21/V21HookPendingPayoutRetry.t.sol:70:10:
+   |
+70 |         (address expectedAddress, bytes32 salt) = HookMiner.find(address(factory), flags, creationCode, constructorArgs);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/FenwickAndTax.t.sol:147:5:
+    |
+147 |     function test_Fenwick_PrefixSumAndFindByCumulative() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+  --> test/RobinhoodToken.t.sol:71:5:
+   |
+71 |     function test_MinEligibleAmount() public {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/V4LotteryHookIntegration.t.sol:779:5:
+    |
+779 |     function test_EX_PoolManagerNotEligible() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/V4LotteryHookIntegration.t.sol:783:5:
+    |
+783 |     function test_EX_HookNotEligible() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/V4LotteryHookIntegration.t.sol:788:5:
+    |
+788 |     function test_EX_EngineNotEligible() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/V4LotteryHookIntegration.t.sol:792:5:
+    |
+792 |     function test_EX_ContractHoldingTokensZeroWeight() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/V4LotteryHookIntegration.t.sol:798:5:
+    |
+798 |     function test_EX_EOAHoldingTokensHasWeight() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+  --> test/v20/V20PendingWinnerRetryQueue.t.sol:33:5:
+   |
+33 |     function test_V20_StoresDebtAndQueues() public {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+╭----------------------------------------------------+------------------+-------------------+--------------------+---------------------╮
+| Contract                                           | Runtime Size (B) | Initcode Size (B) | Runtime Margin (B) | Initcode Margin (B) |
++======================================================================================================================================+
+| BalanceDeltaLibrary                                | 111              | 139               | 24,465             | 49,013              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BeforeSwapDeltaLibrary                             | 111              | 139               | 24,465             | 49,013              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| BitMath                                            | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Counter                                            | 210              | 234               | 24,366             | 48,918              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Create2Factory                                     | 317              | 343               | 24,259             | 48,809              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyDelta                                      | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyLibrary                                    | 111              | 139               | 24,465             | 49,013              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencyReserves                                   | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CurrencySettler                                    | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| CustomRevert                                       | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| DummyContract                                      | 57               | 81                | 24,519             | 49,071              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| DummyRouter                                        | 57               | 81                | 24,519             | 49,071              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ETHRejecter                                        | 111              | 135               | 24,465             | 49,017              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| EngineHarness                                      | 19,845           | 20,475            | 4,731              | 28,677              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Factory (script/DeployLocalV4.s.sol)               | 379              | 405               | 24,197             | 48,747              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Factory (test/DeepSimulation.t.sol)                | 379              | 405               | 24,197             | 48,747              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Factory (test/V4LotteryHookIntegration.t.sol)      | 379              | 405               | 24,197             | 48,747              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Factory (test/v21/V21HookPendingPayoutRetry.t.sol) | 379              | 405               | 24,197             | 48,747              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FixedPoint128                                      | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FixedPoint96                                       | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FullMath                                           | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| GasHog                                             | 172              | 196               | 24,404             | 48,956              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| GhostContract                                      | 57               | 341               | 24,519             | 48,811              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| HarnessLotteryEngine                               | 19,987           | 20,617            | 4,589              | 28,535              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| HarnessRobinhoodToken                              | 23,525           | 25,165            | 1,051              | 23,987              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| HookMiner                                          | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Hooks                                              | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LPFeeLibrary                                       | 215              | 244               | 24,361             | 48,908              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LiquidityMath                                      | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Lock                                               | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LotteryEngine                                      | 19,797           | 20,427            | 4,779              | 28,725              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| LotteryHook                                        | 6,401            | 7,565             | 18,175             | 41,587              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockContract                                       | 64               | 88                | 24,512             | 49,064              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockEngine                                         | 380              | 406               | 24,196             | 48,746              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockNonfungiblePositionManager                     | 739              | 916               | 23,837             | 48,236              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockOfficialPoolQuote                              | 717              | 777               | 23,859             | 48,375              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockRouter                                         | 979              | 1,126             | 23,597             | 48,026              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockSwapRouter                                     | 888              | 1,065             | 23,688             | 48,087              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockUniswapV3Factory                               | 982              | 1,008             | 23,594             | 48,144              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockUniswapV3Pool                                  | 264              | 482               | 24,312             | 48,670              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockV2LikePool                                     | 226              | 402               | 24,350             | 48,750              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockWETH                                           | 1,863            | 2,659             | 22,713             | 46,493              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| NonzeroDeltaCount                                  | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| NormalContract                                     | 57               | 81                | 24,519             | 49,071              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ParseBytes                                         | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Pool                                               | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolIdLibrary                                      | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolManager                                        | 17,151           | 17,336            | 7,425              | 31,816              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolModifyLiquidityTest                            | 4,533            | 4,680             | 20,043             | 44,472              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| PoolSwapTest                                       | 5,035            | 5,182             | 19,541             | 43,970              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Position                                           | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ProtocolFeeLibrary                                 | 113              | 141               | 24,463             | 49,011              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| RejectingActionActor                               | 569              | 595               | 24,007             | 48,557              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| RevertingReceiver                                  | 117              | 141               | 24,459             | 49,011              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| RobinhoodToken                                     | 23,404           | 25,044            | 1,172              | 24,108              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SafeCast                                           | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| Slot0Library                                       | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SqrtPriceMath                                      | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| StateLibrary                                       | 269              | 299               | 24,307             | 48,853              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| StorageSlot                                        | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SwapMath                                           | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TickBitmap                                         | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TickMath                                           | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ToggleDevReceiver                                  | 244              | 280               | 24,332             | 48,872              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TokenHarness                                       | 23,448           | 25,088            | 1,128              | 24,064              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| TransientStateLibrary                              | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| UnsafeMath                                         | 57               | 85                | 24,519             | 49,067              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24CheckpointPool                                  | 226              | 402               | 24,350             | 48,750              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24HookEngineStub                                  | 115              | 139               | 24,461             | 49,013              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24HookFactory                                     | 379              | 405               | 24,197             | 48,747              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24NotAPool                                        | 57               | 81                | 24,519             | 49,071              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24Pool                                            | 226              | 402               | 24,350             | 48,750              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24Quote                                           | 345              | 394               | 24,231             | 48,758              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24Router                                          | 808              | 934               | 23,768             | 48,218              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24V2Pool                                          | 226              | 402               | 24,350             | 48,750              |
+|----------------------------------------------------+------------------+-------------------+--------------------+---------------------|
+| V24V3Pool                                          | 283              | 460               | 24,293             | 48,692              |
+╰----------------------------------------------------+------------------+-------------------+--------------------+---------------------╯
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22SettingsFreeze.t.sol:31:9
+   │
+31 │         token.transfer(user1, 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:188:21
+    │
+188 │                     int128(uint128(taxAmount)), // specified delta
+    │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int128' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:188:28
+    │
+188 │                     int128(uint128(taxAmount)), // specified delta
+    │                            ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint128' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:226:38
+    │
+226 │                 uint256 taxAmount = (uint256(ethDelta) * taxBps) / 10000;
+    │                                      ━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v20/V20AutoStepPendingPayout.t.sol:27:9
+   │
+27 │         harness.transfer(winner, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+  ╭▸ test/v18/V18GhostCleanup.t.sol:8:9
+  │
+8 │         token.transferFrom(from, address(this), amount);
+  │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/DeepSimulation.t.sol:85:13
+   │
+85 │             token.transfer(u, 2_000_000 ether); // give them enough tokens to be eligible!
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/V17Features.t.sol:26:9
+   │
+26 │         token.transfer(user1, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:36:9
+   │
+36 │         token.transfer(user1, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v21/V21BlockOpeningSnapshot.t.sol:16:9
+   │
+16 │         token.transfer(user1, 1500 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/DeepSimulation.t.sol:123:57
+    │
+123 │                     zeroForOne: true, amountSpecified: -int256(amount), sqrtPriceLimitX96: TickMath.MIN_SQRT_PRICE + 1
+    │                                                         ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:231:39
+    │
+231 │                     hookReturnDelta = int128(uint128(taxAmount));
+    │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int128' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:231:46
+    │
+231 │                     hookReturnDelta = int128(uint128(taxAmount));
+    │                                              ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint128' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v21/V21BlockOpeningSnapshot.t.sol:25:9
+   │
+25 │         token.transfer(user2, 500 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/DeepSimulation.t.sol:133:58
+    │
+133 │                     zeroForOne: false, amountSpecified: -int256(amount), sqrtPriceLimitX96: TickMath.MAX_SQRT_PRICE - 1
+    │                                                          ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/V17Features.t.sol:27:9
+   │
+27 │         token.transfer(user2, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:42:9
+   │
+42 │         token.transfer(user2, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:236:34
+    │
+236 │                 uint256 ethOut = uint256(-ethDelta);
+    │                                  ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v21/V21TriggerDrawBounds.t.sol:16:9
+   │
+16 │         token.transfer(user1, 1500 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/V17Features.t.sol:90:9
+   │
+90 │         token.transfer(user2, 1000 ether); // user1 balance is now 0
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:55:9
+   │
+55 │         token.transfer(user1, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22SettingsFreeze.t.sol:69:9
+   │
+69 │         token.transfer(user1, 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22SettingsFreeze.t.sol:73:9
+   │
+73 │         token.transfer(user1, 100 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/V17Features.t.sol:116:9
+    │
+116 │         token.transfer(owner, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[divide-before-multiply]: multiplication should occur before division to avoid loss of precision
+    ╭▸ contracts/RobinhoodToken.sol:994:34
+    │
+994 │         uint256 slippageAmount = (expectedEthOut / 10_000) * autoSwapSlippageBps
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:61:9
+   │
+61 │         token.transfer(user2, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+  ╭▸ test/v22/V22RoundAwareWinnerResolution.t.sol:9:9
+  │
+9 │         token.transfer(user1, eligibleAmount);
+  │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/V17Features.t.sol:142:9
+    │
+142 │         token.transfer(dummyContract, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:242:39
+    │
+242 │                     hookReturnDelta = int128(uint128(taxAmount));
+    │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int128' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/LotteryEngineBasic.t.sol:67:9
+   │
+67 │         token.transfer(user1, eligibleAmount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:64:9
+   │
+64 │         token.transfer(user3, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:83:9
+   │
+83 │         token.transfer(user1, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ contracts/RobinhoodToken.sol:1010:43
+     │
+1010 │         if (lastAutoSwapAttemptAt != 0 && block.timestamp < lastAutoSwapAttemptAt + swapCooldown) return;
+     │                                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v23/V23FenwickBlockOpeningRegression.t.sol:16:9
+   │
+16 │         token.transfer(user1, ALICE_OPENING);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v23/V23FenwickBlockOpeningRegression.t.sol:17:9
+   │
+17 │         token.transfer(user2, BOB_OPENING);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:570:17
+    │
+570 │             if (block.timestamp > r.startTimestamp + roundDuration + TRIGGER_DRAW_GRACE_PERIOD) {
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v18/V18ConfigLocks.t.sol:24:9
+   │
+24 │         token.transfer(user1, token.minEligibleAmount());
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/LotteryHook.sol:242:46
+    │
+242 │                     hookReturnDelta = int128(uint128(taxAmount));
+    │                                              ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint128' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22PendingDevPayout.t.sol:28:9
+   │
+28 │         token.transfer(user1, token.minEligibleAmount());
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v18/V18PendingWinnerPayouts.t.sol:11:9
+   │
+11 │         token.transfer(winner, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22BlockOpeningHolderMapping.t.sol:92:9
+   │
+92 │         token.transfer(user1, minEligible);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24AutoSwapOracleProtection.t.sol:67:9
+   │
+67 │         RobinhoodToken(payable(path[0])).transferFrom(msg.sender, address(this), amountIn);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22RoundAwareWinnerResolution.t.sol:21:9
+   │
+21 │         token.transfer(user2, eligibleAmount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22RoundAwareWinnerResolution.t.sol:22:9
+   │
+22 │         token.transfer(user1, eligibleAmount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22RoundAwareWinnerResolution.t.sol:47:9
+   │
+47 │         token.transfer(user1, eligibleAmount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22RoundAwareWinnerResolution.t.sol:56:9
+   │
+56 │         token.transfer(user2, eligibleAmount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22RoundAwareWinnerResolution.t.sol:57:9
+   │
+57 │         token.transfer(user1, eligibleAmount);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:574:17
+    │
+574 │             if (block.timestamp >= r.startTimestamp + roundDuration) {
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:595:52
+    │
+595 │                 token.tradingActivatedAt() != 0 && block.timestamp >= token.tradingActivatedAt() + FIRST_LOTTERY_DELAY
+    │                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ contracts/RobinhoodToken.sol:1077:47
+     │
+1077 │         require(lastAutoSwapAttemptAt == 0 || block.timestamp >= lastAutoSwapAttemptAt + swapCooldown, "Swap cooldown");
+     │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+  ╭▸ test/v22/V22FenwickOpeningFuzz.t.sol:9:9
+  │
+9 │         token.transfer(user1, openingWeight);
+  │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v23/V23FenwickBlockOpeningRegression.t.sol:33:9
+   │
+33 │         token.transfer(user1, 100 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:596:24
+    │
+596 │                     && block.timestamp >= lastRoundStartedAt + MIN_ROUND_START_SPACING
+    │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v18/V18PendingWinnerPayouts.t.sol:68:9
+   │
+68 │         token.transfer(winner, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24AutoSwapOracleProtection.t.sol:98:9
+   │
+98 │         token.transfer(seller, 10_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/mocks/MockUniswapV3.sol:78:13
+   │
+78 │             IERC20(params.token0).transferFrom(msg.sender, address(this), params.amount0Desired);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22FenwickOpeningFuzz.t.sol:13:9
+   │
+13 │         token.transfer(user1, added);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:628:17
+    │
+628 │         require(block.timestamp >= token.tradingActivatedAt() + FIRST_LOTTERY_DELAY, "Too early after launch");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v18/V18PendingWinnerPayouts.t.sol:101:9
+    │
+101 │         token.transfer(winner, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ contracts/mocks/MockUniswapV3.sol:81:13
+   │
+81 │             IERC20(params.token1).transferFrom(msg.sender, address(this), params.amount1Desired);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ contracts/mocks/MockUniswapV3.sol:114:9
+    │
+114 │         IERC20(params.tokenIn).transferFrom(msg.sender, address(this), params.amountIn);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:630:17
+    │
+630 │         require(block.timestamp >= lastRoundStartedAt + MIN_ROUND_START_SPACING, "Interval not passed");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v23/V23FenwickBlockOpeningRegression.t.sol:53:9
+   │
+53 │         token.transfer(user1, added);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:439:33
+    │
+439 │         activeSnapshotRoundId = uint64(roundId);
+    │                                 ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint64' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:25:9
+   │
+25 │         token.transfer(address(mockContract), 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v24/V24AutoSwapOracleProtection.t.sol:103:9
+    │
+103 │         token.transfer(pool, amount);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v24/V24AutoSwapOracleProtection.t.sol:153:9
+    │
+153 │         fresh.transfer(seller, 10_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:440:31
+    │
+440 │         activeSnapshotBlock = uint64(snapshotBlock);
+    │                               ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint64' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:30:9
+   │
+30 │         token.transfer(address(mockContract), 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v18/V18PendingWinnerPayouts.t.sol:134:9
+    │
+134 │         token.transfer(winner, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v23/V23FenwickBlockOpeningRegression.t.sol:66:9
+   │
+66 │         token.transfer(user1, 100 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v24/V24AutoSwapOracleProtection.t.sol:158:9
+    │
+158 │         fresh.transfer(freshPool, 1_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ contracts/mocks/MockUniswapV3.sol:119:13
+    │
+119 │             IERC20(WETH9).transfer(params.recipient, amountOut);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ contracts/mocks/MockUniswapV3.sol:121:13
+    │
+121 │             IERC20(params.tokenOut).transfer(params.recipient, amountOut);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v20/V20PendingWinnerRetryQueue.t.sol:13:9
+   │
+13 │         token.transfer(winner, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v24/V24AutoSwapOracleProtection.t.sol:162:9
+    │
+162 │         fresh.transfer(freshPool, 1_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22RewardPolicy.t.sol:26:9
+   │
+26 │         token.transfer(user1, token.minEligibleAmount());
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:442:37
+    │
+442 │         activeSnapshotTotalWeight = uint192(snapshotWeight);
+    │                                     ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint192' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/V4LotteryHookIntegration.t.sol:101:9
+    │
+101 │         token.transfer(user, 2_000_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25PostFreezeOperations.t.sol:35:9
+   │
+35 │         token.transfer(seller, 10_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:665:17
+    │
+665 │         require(block.timestamp >= r.startTimestamp + roundDuration, "Holding epoch not finished");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:666:17
+    │
+666 │         require(block.timestamp < r.startTimestamp + roundDuration + TRIGGER_DRAW_GRACE_PERIOD, "Grace period missed");
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:43:9
+   │
+43 │         token.transfer(address(mockContract), 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25PostFreezeOperations.t.sol:40:9
+   │
+40 │         token.transfer(pool, 1_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[incorrect-shift]: the order of args in a shift operation is incorrect
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:158:26
+    │
+158 │             if ((mask & (1 << i)) != 0) {
+    │                          ━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift
+
+warning[incorrect-shift]: the order of args in a shift operation is incorrect
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:170:26
+    │
+170 │             if ((mask & (1 << i)) == 0) {
+    │                          ━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:467:33
+    │
+467 │             forfeitureRoundId = uint64(roundId);
+    │                                 ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint64' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/V4LotteryHookIntegration.t.sol:158:46
+    │
+158 │         uint256 ethDeltaAbs = ethDelta < 0 ? uint256(-int256(ethDelta)) : uint256(int256(ethDelta));
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/V4LotteryHookIntegration.t.sol:158:75
+    │
+158 │         uint256 ethDeltaAbs = ethDelta < 0 ? uint256(-int256(ethDelta)) : uint256(int256(ethDelta));
+    │                                                                           ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:16:13
+   │
+16 │             token.transfer(holders[i], weights[i]);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/FenwickAndTax.t.sol:39:9
+   │
+39 │         RobinhoodToken(payable(path[0])).transferFrom(msg.sender, address(this), amountIn);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:531:34
+    │
+531 │                 next = current + uint256(delta);
+    │                                  ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:50:9
+   │
+50 │         token.transfer(address(mockContract), token.minEligibleAmount());
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:71:9
+   │
+71 │         token.transfer(address(mockContract), 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/LotteryEngine.sol:735:13
+    │
+735 │             block.timestamp >= r.startTimestamp + roundDuration + TRIGGER_DRAW_GRACE_PERIOD, "Grace period not missed"
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:533:36
+    │
+533 │                 uint256 absDelta = uint256(-delta);
+    │                                    ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/V4LotteryHookIntegration.t.sol:181:46
+    │
+181 │         uint256 ethDeltaAbs = ethDelta < 0 ? uint256(-int256(ethDelta)) : uint256(int256(ethDelta));
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25PostFreezeOperations.t.sol:102:9
+    │
+102 │         token.transfer(pool, 1_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:142:9
+    │
+142 │         token.transfer(user1, 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24CheckpointAndRoundDuration.t.sol:37:9
+   │
+37 │         token.transfer(alice, 10_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24CheckpointAndRoundDuration.t.sol:42:9
+   │
+42 │         token.transfer(pool, 1_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25PostFreezeOperations.t.sol:111:9
+    │
+111 │         token.transfer(pool, 1_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25PostFreezeOperations.t.sol:118:9
+    │
+118 │         token.transfer(pool, 1_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+     ╭▸ contracts/LotteryEngine.sol:1054:28
+     │
+1054 │             node.roundId = uint64(roundId);
+     │                            ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │
+     │       // casting to 'uint64' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/V4LotteryHookIntegration.t.sol:181:75
+    │
+181 │         uint256 ethDeltaAbs = ethDelta < 0 ? uint256(-int256(ethDelta)) : uint256(int256(ethDelta));
+    │                                                                           ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24CheckpointAndRoundDuration.t.sol:43:9
+   │
+43 │         token.transfer(pool, 2_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:539:28
+    │
+539 │             node.current = uint192(next);
+    │                            ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint192' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/RobinhoodToken.t.sol:41:9
+   │
+41 │         token.transfer(user1, 1000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/RobinhoodToken.t.sol:55:9
+   │
+55 │         token.transfer(user1, maxWallet + 1);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/V4LotteryHookIntegration.t.sol:645:9
+    │
+645 │         token.transfer(address(this), 1_999_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:749:32
+    │
+749 │             _treeUpdate(index, int256(delta));
+    │                                ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ contracts/RobinhoodToken.sol:755:33
+    │
+755 │             _treeUpdate(index, -int256(delta));
+    │                                 ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/RobinhoodToken.t.sol:58:9
+   │
+58 │         token.transfer(user1, maxWallet);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/V4LotteryHookIntegration.t.sol:676:9
+    │
+676 │         token.transfer(user2, 1_000_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+     ╭▸ contracts/LotteryEngine.sol:1055:27
+     │
+1055 │             node.weight = uint192(next);
+     │                           ━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:48:9
+   │
+48 │         token.transfer(owner, 1);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24CheckpointAndRoundDuration.t.sol:62:9
+   │
+62 │         token.transfer(address(0xB0B), 2_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+     ╭▸ contracts/RobinhoodToken.sol:1165:41
+     │
+1165 │             ckpts[length - 1].balance = uint192(newBalance);
+     │                                         ━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:86:9
+   │
+86 │         token.transfer(user1, 2000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:101:9
+    │
+101 │         token.transfer(address(mockContract), 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:143:9
+    │
+143 │         token.transfer(user2, 3000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+     ╭▸ contracts/RobinhoodToken.sol:1167:78
+     │
+1167 │             ckpts.push(Checkpoint({fromBlock: uint64(block.number), balance: uint192(newBalance)}));
+     │                                                                              ━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │
+     │       // casting to 'uint192' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:66:9
+   │
+66 │         token.transfer(user2, startWeight);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v24/V24CheckpointAndRoundDuration.t.sol:73:9
+   │
+73 │         token.transfer(address(0xB0B), 2_000 ether);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/V4LotteryHookIntegration.t.sol:746:9
+    │
+746 │         t.transfer(u, 2_000_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v22/V22ContractLotteryWhitelist.t.sol:125:9
+    │
+125 │         token.transfer(userEOA, 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+     ╭▸ test/V4LotteryHookIntegration.t.sol:1028:13
+     │
+1028 │             t.transfer(holder, 2_000_000 ether);
+     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:77:9
+   │
+77 │         token.transfer(owner, 1);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+     ╭▸ contracts/LotteryEngine.sol:1076:40
+     │
+1076 │         forfeitedRoundByIndex[index] = uint64(roundId);
+     │                                        ━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │
+     │       // casting to 'uint64' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │
+     │
+     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:78:9
+   │
+78 │         token.transfer(user1, 1);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:144:9
+    │
+144 │         token.transfer(user3, 5000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:172:9
+    │
+172 │         token.transfer(user3, 3000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:190:13
+    │
+190 │             token.transfer(churner, 1500 ether);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:193:13
+    │
+193 │             token.transfer(owner, 1500 ether);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:211:9
+    │
+211 │         token.transfer(user2, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:221:9
+    │
+221 │         token.transfer(pool, poolBal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:224:9
+    │
+224 │         token.transfer(user1, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:233:9
+    │
+233 │         token.transfer(pool, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:238:9
+    │
+238 │         token.transfer(address(token), 100_000 ether); // >= swapThreshold
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:245:9
+    │
+245 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:254:9
+    │
+254 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:259:9
+    │
+259 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:271:9
+    │
+271 │         freshToken.transfer(address(freshToken), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:278:9
+    │
+278 │         freshToken.transfer(freshPool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:284:9
+    │
+284 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:293:9
+    │
+293 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:302:9
+    │
+302 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:90:9
+   │
+90 │         token.transfer(owner, 1);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:101:9
+    │
+101 │         token.transfer(user2, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:105:9
+    │
+105 │         token.transfer(user2, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:121:9
+    │
+121 │         token.transfer(owner, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:138:9
+    │
+138 │         token.transfer(owner, dip);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:148:34
+    │
+148 │             holders[i] = address(uint160(0x1000 + i));
+    │                                  ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint160' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:160:17
+    │
+160 │                 token.transfer(owner, 1);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:307:9
+    │
+307 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:313:9
+    │
+313 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:320:9
+    │
+320 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:201:9
+    │
+201 │         token.transfer(owner, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:213:9
+    │
+213 │         token.transfer(user1, startWeight * 2);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:217:9
+    │
+217 │         token.transfer(owner, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:227:9
+    │
+227 │         token.transfer(user3, startWeight * 2);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:231:9
+    │
+231 │         token.transfer(owner, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:241:9
+    │
+241 │         token.transfer(user1, startWeight);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:245:9
+    │
+245 │         token.transfer(owner, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:250:9
+    │
+250 │         token.transfer(owner, startWeight);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:255:9
+    │
+255 │         token.transfer(owner, 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:271:34
+    │
+271 │             holders[i] = address(uint160(0x5000 + i));
+    │                                  ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'uint160' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/v25/V25StrictDiamondHandsForfeiture.t.sol:280:13
+    │
+280 │             token.transfer(owner, 1);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:330:9
+    │
+330 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:334:9
+    │
+334 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:341:9
+    │
+341 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:347:9
+    │
+347 │         token.transfer(pool, 10);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:358:9
+    │
+358 │         token.transfer(address(token), 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:365:9
+    │
+365 │         token.transfer(address(token), 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:371:9
+    │
+371 │         token.transfer(address(token), 300_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:381:9
+    │
+381 │         token.transfer(address(token), 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:401:9
+    │
+401 │         token.transfer(attacker, 1500 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:419:9
+    │
+419 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:426:9
+    │
+426 │         token.transfer(pool, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:490:9
+    │
+490 │         freshToken.transfer(address(0x999), 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:506:9
+    │
+506 │         token.transfer(user3, 4000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:521:9
+    │
+521 │         token.transfer(user3, 4000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:552:9
+    │
+552 │         token.transfer(user1, 98_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:597:9
+    │
+597 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:607:9
+    │
+607 │         token.transfer(pool, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:617:9
+    │
+617 │         token.transfer(address(token), 100_000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:627:9
+    │
+627 │         token.transfer(pool, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:638:9
+    │
+638 │         token.transfer(user1, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:648:9
+    │
+648 │         token.transfer(user2, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:653:9
+    │
+653 │         token.transfer(user2, 100 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:675:9
+    │
+675 │         token.transfer(user1, 1000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:695:9
+    │
+695 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:707:9
+    │
+707 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:711:9
+    │
+711 │         token.transfer(newHolder, 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:731:9
+    │
+731 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:751:9
+    │
+751 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:778:9
+    │
+778 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:809:9
+    │
+809 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:813:9
+    │
+813 │         token.transfer(user1, 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:843:9
+    │
+843 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:844:9
+    │
+844 │         token.transfer(user1, 2000 ether); // cancels pending free round marker
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:870:9
+    │
+870 │         fresh.transfer(newHolder, 2000 ether);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:887:9
+    │
+887 │         fresh.transfer(newHolder, 2000 ether); // does not revert!
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:904:13
+    │
+904 │             token.transfer(users[i], 2000 ether);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:914:13
+    │
+914 │             token.transfer(owner, bal);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:947:9
+    │
+947 │         token.transfer(owner, bal); // queued for pending free
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+    ╭▸ test/FenwickAndTax.t.sol:993:9
+    │
+993 │         token.transfer(owner, bal);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
